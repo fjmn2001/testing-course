@@ -1,0 +1,39 @@
+{
+    "name": "medine/php",
+    "description": "Shell project for PHP testing",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Medine.dev",
+            "email": "admin@medine.dev"
+        }
+    ],
+    "require": {
+        "php": "^8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "mockery/mockery": "^1",
+        "squizlabs/php_codesniffer": "4.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Medine\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "scripts": {
+        "style": "phpcs -p --standard=PSR2 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 src tests",
+        "phpunit": "phpunit --configuration phpunit.xml",
+        "test": [
+            "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+            "phpunit --configuration phpunit.xml"
+        ]
+    }
+}
