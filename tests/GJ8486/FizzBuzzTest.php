@@ -9,9 +9,7 @@ class FizzBuzzTest extends TestCase
 {
 
 
-    /**
-     * @test
-     */
+    /** @test */
     public function ShouldReturnItself()
     {
         $fizzBuzz = new FizzBuzz;
@@ -19,9 +17,7 @@ class FizzBuzzTest extends TestCase
         self::assertEquals(($fizzBuzz)(2), 2);
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function returnFizzIfDivisibleBy3()
     {
         $fizzBuzz = new FizzBuzz;
@@ -29,18 +25,14 @@ class FizzBuzzTest extends TestCase
     }
 
 
-    /**
-     * @test
-     */
+    /** @test */
     public function returnBuzzIfDivisibleBy5()
     {
         $fizzBuzz = new FizzBuzz;
         self::assertEquals(($fizzBuzz)(5), 'Buzz');
     }
 
-    /**
-     * @test
-     */
+    /** @test */
     public function returnFizzBuzzIfDivisibleBy3And5()
     {
         $fizzBuzz = new FizzBuzz;
