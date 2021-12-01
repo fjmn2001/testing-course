@@ -1,11 +1,13 @@
 <?php
 
-namespace Tests;
+declare(strict_types=1);
 
-use Medine\FizzBuzz;
+namespace Tests\ChanchitoFeliz\Application;
+
+use Medine\ChanchitoFeliz\Application\FizzBuzz;
 use PHPUnit\Framework\TestCase;
 
-class FizzBuzzTest extends TestCase
+final class FizzBuzzTest extends TestCase
 {
     /**
      * @test
