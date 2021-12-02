@@ -4,21 +4,6 @@ namespace Medine\GJ8486\RomanNumerals;
 
 class RomanNumerals
 {
-//    protected $romanNumelars;
-
-//    public function __construct()
-//    {
-//        $this->romanNumelars = [
-//            1 => 'I',
-//            5 => 'V',
-//            10 => 'X',
-//            50 => 'L',
-//            100 => 'C',
-//            500 => 'D',
-//            1000 => 'M'
-//        ];
-//    }
-
     public function __invoke(int $numb): string
     {
         $result = '';
