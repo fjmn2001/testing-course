@@ -23,7 +23,7 @@ final class MoviePersistenceRepository implements MovieRepository
 
     public function find(string $id): ?Movie
     {
-        $indice = array_search($id, array_column($this->DB, 'id'),true);
+        $indice = array_search($id, array_column($this->DB, 'id'), true);
 
         return $indice == false
             ? null
@@ -37,7 +37,7 @@ final class MoviePersistenceRepository implements MovieRepository
 
     public function delete(string $id): void
     {
-        $indice = array_search($id, array_column($this->DB, 'id'),true);
+        $indice = array_search($id, array_column($this->DB, 'id'), true);
         unset($this->DB[$indice]);
     }
 

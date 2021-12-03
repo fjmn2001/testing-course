@@ -54,5 +54,4 @@ final class ScoreKeeper
     {
         $this->scoreTeamB += 3;
     }
-
 }

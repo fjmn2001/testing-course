@@ -54,7 +54,8 @@ class MovieRepositoryTest extends TestCase
                 'name' => $movieResult->name(),
                 'duration' => $movieResult->duration(),
                 'category' => $movieResult->category()
-            ]);
+            ]
+        );
     }
 
     /**
