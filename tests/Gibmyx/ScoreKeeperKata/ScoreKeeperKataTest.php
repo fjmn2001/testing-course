@@ -1,18 +1,16 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Tests\Gibmyx\ScoreKeeperKata;
 
 use Medine\Gibmyx\ScoreKeeperKata\ScoreKeeper;
 use PHPUnit\Framework\TestCase;
 
-final class ScoreKeeperKataTest extends TestCase
+class ScoreKeeperKataTest extends TestCase
 {
     /**
      * @test
      */
-    public function team_score_A_of_three_points()
+    public function teamScoreAOfThreePoints()
     {
         $scoreKeeper = ScoreKeeper::make();
 
@@ -24,7 +22,7 @@ final class ScoreKeeperKataTest extends TestCase
     /**
      * @test
      */
-    public function team_score_B_of_five_points()
+    public function teamScoreBOfFivePoints()
     {
         $scoreKeeper = ScoreKeeper::make();
 
@@ -38,7 +36,7 @@ final class ScoreKeeperKataTest extends TestCase
     /**
      * @test
      */
-    public function team_score_B_of_three_points_and_team_score_A_sex_ponts()
+    public function teamScoreBOfThreePointsAndTeamScoreASexPonts()
     {
         $scoreKeeper = ScoreKeeper::make();
 
@@ -54,7 +52,7 @@ final class ScoreKeeperKataTest extends TestCase
     /**
      * @test
      */
-    public function team_score_a_of_twelve_points_and_team_score_a_of_thirty_points()
+    public function teamScoreAOfTwelvePointsAndTeamScoreAOfThirtyPoints()
     {
         $scoreKeeper = ScoreKeeper::make();
 
@@ -82,5 +80,4 @@ final class ScoreKeeperKataTest extends TestCase
 
         self::assertEquals("012:030", $scoreKeeper->getScore());
     }
-
 }
