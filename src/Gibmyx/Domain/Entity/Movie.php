@@ -16,8 +16,7 @@ final class Movie
         string $name,
         string $duration,
         string $category
-    )
-    {
+    ) {
         $this->id = $id;
         $this->name = $name;
         $this->duration = $duration;
@@ -49,8 +48,7 @@ final class Movie
         string $name,
         string $duration,
         string $category
-    ): self
-    {
+    ): self {
         return new self(
             $id,
             $name,
@@ -58,5 +56,4 @@ final class Movie
             $category
         );
     }
-
 }

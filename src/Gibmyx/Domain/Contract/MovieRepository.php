@@ -12,5 +12,4 @@ interface MovieRepository
     public function find(string $id): ?Movie;
 
     public function delete(string $id): void;
-
 }

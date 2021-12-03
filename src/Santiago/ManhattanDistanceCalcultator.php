@@ -4,25 +4,27 @@ declare(strict_types=1);
 
 namespace Medine\Santiago;
 
+use Closure;
 use Medine\Santiago\Exceptions\DistanceErrorException;
 
 final class ManhattanDistanceCalcultator
 {
     public function __invoke(array $vector1, array $vector2): int
     {
-        $counter = count($vector1);
-        $counter2 = count($vector2);
-
-        if ($counter !== $counter2) {
+        if (count($vector1) !== count($vector2)) {
             throw new DistanceErrorException;
         }
 
-        $addition = 0;
+        $i = 0;
 
-        for ($i = 0; $i < $counter; $i++) {
-            $addition += abs($vector1[$i] - $vector2[$i]);
-        }
+        return array_reduce($vector1, $this->toReduce($vector2, $i), 0);
+    }
 
-        return $addition;
+    private function toReduce(array $vector2, int $i): Closure
+    {
+        return static function (int $acc, int $value) use ($vector2, &$i) {
+            $i++;
+            return $acc + abs($value - $vector2[$i - 1]);
+        };
     }
 }
