@@ -7,14 +7,22 @@ use Medine\GJ8486\Manga\domain\MangaPersistence;
 
 class MangaPersistenceText implements MangaPersistence
 {
+    public $DB = [];
+
     public function save(Manga $manga)
     {
-        return $manga;
+        $this->DB[] = $manga;
+
+        return [
+            "id" => $manga->id(),
+            "nombre" => $manga->nombre(),
+            "autor" => $manga->autor(),
+        ];
     }
 
-    public function findOne(Manga $manga)
+    public function findOne(string $id)
     {
-        // TODO: Implement findOne() method.
+       return $this->DB;
     }
 
 }
