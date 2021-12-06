@@ -2,35 +2,35 @@
 
 namespace Tests\GJ8486\Manga\application;
 
-use Medine\GJ8486\Manga\application\MangaCreate;
-use Medine\GJ8486\Manga\application\MangaFindOne;
+use Medine\GJ8486\Manga\domain\Manga;
+use Medine\GJ8486\Manga\infrastructure\MangaPersistenceText;
 use PHPUnit\Framework\TestCase;
 
 class MangaCreateTest extends TestCase
 {
+
     /** @test */
     public function itShouldCreateANewManga()
     {
-        $nuevo_manga = [
-            'id' => '20202020202',
-            'nombre' => 'Vinland Saga',
-            'autor' => 'Makoto Yukimura'
-        ];
-        $manga_guardado = (new MangaCreate())($nuevo_manga);
-        $this->assertSame($nuevo_manga, $manga_guardado);
+        $DB = new MangaPersistenceText;
+
+        $nuevo_manga = Manga::create('20202020202', 'Vinland Saga', 'Makoto Yukimura');
+        $DB->save($nuevo_manga);
+
+        $this->assertEquals( 1, count($DB->getDB()));
     }
 
     /** @test */
     public function itShouldFindAndReturndAManga()
     {
-        $nuevo_manga = [
-            'id' => '20202020202',
-            'nombre' => 'Vinland Saga',
-            'autor' => 'Makoto Yukimura'
-        ];
-        (new MangaCreate())($nuevo_manga);
-        $manga_encontrado = (new MangaFindOne())('20202020202');
-        $this->assertSame($nuevo_manga, $manga_encontrado);
+        $DB = new MangaPersistenceText;
+        $DB->save((Manga::create('20202020202', 'Vinland Saga', 'Makoto Yukimura')));
+        $DB->save((Manga::create('20202020200', 'One Piece', 'Eiichirō Oda')));
+        $DB->save((Manga::create('20202020201', 'Death Note', 'Tsugumi Ōba')));
+
+        $result = $DB->findOne('20202020200');
+
+        $this->assertEquals( 'One Piece', $result->nombre());
     }
 
 }
