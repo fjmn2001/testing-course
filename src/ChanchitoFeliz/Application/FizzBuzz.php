@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Medine;
+namespace Medine\ChanchitoFeliz\Application;
 
 final class FizzBuzz
 {
