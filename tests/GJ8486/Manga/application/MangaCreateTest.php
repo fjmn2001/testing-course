@@ -17,7 +17,7 @@ class MangaCreateTest extends TestCase
         $nuevo_manga = Manga::create('20202020202', 'Vinland Saga', 'Makoto Yukimura');
         $DB->save($nuevo_manga);
 
-        $this->assertEquals( 1, count($DB->getDB()));
+        $this->assertEquals(1, count($DB->getDB()));
     }
 
     /** @test */
@@ -30,7 +30,6 @@ class MangaCreateTest extends TestCase
 
         $result = $DB->findOne('20202020200');
 
-        $this->assertEquals( 'One Piece', $result->nombre());
+        $this->assertEquals('One Piece', $result->nombre());
     }
-
 }

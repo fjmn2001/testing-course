@@ -19,3 +19,7 @@ deps:
 .PHONY: test
 test:
 	docker-compose exec app composer test
+
+.PHONY: fix-style
+fix-style:
+	docker-compose exec app composer fix-style

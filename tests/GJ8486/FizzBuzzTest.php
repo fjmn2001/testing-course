@@ -38,5 +38,4 @@ class FizzBuzzTest extends TestCase
         $fizzBuzz = new FizzBuzz;
         self::assertEquals(($fizzBuzz)(15), 'FizzBuzz');
     }
-
 }
