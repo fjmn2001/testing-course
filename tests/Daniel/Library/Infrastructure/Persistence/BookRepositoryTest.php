@@ -51,5 +51,4 @@ final class BookRepositoryTest extends TestCase
 
         $this->assertEquals($book, $this->repository->find($id));
     }
-
 }
