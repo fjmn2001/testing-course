@@ -1,9 +1,9 @@
 <?php
 
-namespace Medine\GJ8486\Manga\infrastructure;
+namespace Medine\GJ8486\Manga\Infrastructure;
 
-use Medine\GJ8486\Manga\domain\Manga;
-use Medine\GJ8486\Manga\domain\MangaPersistence;
+use Medine\GJ8486\Manga\Domain\Manga;
+use Medine\GJ8486\Manga\Domain\MangaPersistence;
 
 class MangaPersistenceText implements MangaPersistence
 {

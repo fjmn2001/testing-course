@@ -1,6 +1,6 @@
 <?php
 
-namespace Medine\GJ8486\Manga\domain;
+namespace Medine\GJ8486\Manga\Domain;
 
 class Manga
 {
@@ -11,7 +11,7 @@ class Manga
     )
     {}
 
-    public static function create(string $id, string $nombre, string $autor,)
+    public static function create(string $id, string $nombre, string $autor)
     {
         return new self($id, $nombre, $autor,);
     }

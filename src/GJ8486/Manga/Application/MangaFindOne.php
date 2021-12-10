@@ -1,9 +1,9 @@
 <?php
 
-namespace Medine\GJ8486\Manga\application;
+namespace Medine\GJ8486\Manga\Application;
 
-use Medine\GJ8486\Manga\domain\Manga;
-use Medine\GJ8486\Manga\infrastructure\MangaPersistenceText;
+use Medine\GJ8486\Manga\Domain\Manga;
+use Medine\GJ8486\Manga\Infrastructure\MangaPersistenceText;
 
 class MangaFindOne
 {
