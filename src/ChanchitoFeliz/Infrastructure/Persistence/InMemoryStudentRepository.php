@@ -20,4 +20,9 @@ final class InMemoryStudentRepository implements StudentRepository
     {
         return $this->students[$id] ?? null;
     }
+
+    public function all(): array
+    {
+        return $this->students;
+    }
 }
