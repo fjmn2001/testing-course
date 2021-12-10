@@ -9,4 +9,6 @@ interface StudentRepository
     public function save(Student $student): void;
 
     public function search(string $id): ?Student;
+
+    public function all(): array;
 }
