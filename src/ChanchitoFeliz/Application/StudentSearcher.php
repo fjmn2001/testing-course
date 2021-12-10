@@ -10,8 +10,7 @@ final class StudentSearcher
 {
     public function __construct(
         private StudentRepository $repository
-    )
-    {
+    ) {
     }
 
     public function __invoke(): array

@@ -11,8 +11,7 @@ final class Book
         private string $name,
         private string $author,
         private int $year
-    )
-    {
+    ) {
     }
 
     public function id(): string
