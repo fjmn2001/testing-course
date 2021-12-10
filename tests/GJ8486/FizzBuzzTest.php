@@ -10,7 +10,7 @@ class FizzBuzzTest extends TestCase
 
 
     /** @test */
-    public function ShouldReturnItself()
+    public function shouldReturnItself(): void
     {
         $fizzBuzz = new FizzBuzz;
         self::assertEquals(($fizzBuzz)(1), 1);
