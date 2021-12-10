@@ -1,6 +1,6 @@
 <?php
 
-namespace Medine\GJ8486\Manga\domain;
+namespace Medine\GJ8486\Manga\Domain;
 
 interface MangaPersistence
 {

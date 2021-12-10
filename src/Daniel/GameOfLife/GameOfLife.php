@@ -67,64 +67,72 @@ final class GameOfLife
 
     private function topLeft(int $rowIndex, int $cellIndex): ?int
     {
-        if ($rowIndex === 0 || $cellIndex === 0)
+        if ($rowIndex === 0 || $cellIndex === 0) {
             return null;
+        }
 
         return $this->grid[$rowIndex-1][$cellIndex-1];
     }
 
     private function topCenter(int $rowIndex, int $cellIndex): ?int
     {
-        if ($rowIndex === 0)
+        if ($rowIndex === 0) {
             return null;
+        }
 
         return $this->grid[$rowIndex-1][$cellIndex];
     }
 
     private function topRight(int $rowIndex, int $cellIndex, int $rowSize): ?int
     {
-        if ($rowIndex === 0 || $cellIndex === $rowSize)
+        if ($rowIndex === 0 || $cellIndex === $rowSize) {
             return null;
+        }
 
         return $this->grid[$rowIndex-1][$cellIndex+1];
     }
 
     private function centerLeft(int $rowIndex, int $cellIndex): ?int
     {
-        if ($cellIndex === 0)
+        if ($cellIndex === 0) {
             return null;
+        }
 
         return $this->grid[$rowIndex][$cellIndex-1];
     }
 
     private function centerRight(int $rowIndex, int $cellIndex, int $rowSize): ?int
     {
-        if ($cellIndex === $rowSize)
+        if ($cellIndex === $rowSize) {
             return null;
+        }
 
         return $this->grid[$rowIndex][$cellIndex+1];
     }
 
     private function bottomLeft(int $rowIndex, int $cellIndex): ?int
     {
-        if ($rowIndex === count($this->grid) - 1 || $cellIndex === 0)
+        if ($rowIndex === count($this->grid) - 1 || $cellIndex === 0) {
             return null;
+        }
 
         return $this->grid[$rowIndex+1][$cellIndex-1];
     }
 
     private function bottomCenter(int $rowIndex, int $cellIndex): ?int
     {
-        if ($rowIndex === count($this->grid) - 1)
+        if ($rowIndex === count($this->grid) - 1) {
             return null;
+        }
 
         return $this->grid[$rowIndex+1][$cellIndex];
     }
 
     private function bottomRight(int $rowIndex, int $cellIndex, int $rowSize): ?int
     {
-        if ($rowIndex === count($this->grid) - 1 || $cellIndex === $rowSize)
+        if ($rowIndex === count($this->grid) - 1 || $cellIndex === $rowSize) {
             return null;
+        }
 
         return $this->grid[$rowIndex+1][$cellIndex+1];
     }

@@ -8,9 +8,15 @@ class FizzBuzz
     {
         $respons = $number;
 
-        if (!($number % 3)) $respons = 'Fizz';
-        if (!($number % 5)) $respons = 'Buzz';
-        if (!($number % 3) && !($number % 5)) $respons = 'FizzBuzz';
+        if (!($number % 3)) {
+            $respons = 'Fizz';
+        }
+        if (!($number % 5)) {
+            $respons = 'Buzz';
+        }
+        if (!($number % 3) && !($number % 5)) {
+            $respons = 'FizzBuzz';
+        }
 
         return $respons;
     }

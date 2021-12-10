@@ -12,7 +12,7 @@ final class GameOfLifeTest extends TestCase
     /**
      * @test
      */
-    public function it_should_get_cero_alive_cells()
+    public function itShouldGetZeroAliveCells(): void
     {
         $grid =
             [
@@ -36,7 +36,7 @@ final class GameOfLifeTest extends TestCase
     /**
      * @test
      */
-    public function it_should_turn_an_alive_cell_to_dead()
+    public function itShouldTurnAnAliveCellToDead(): void
     {
         $grid =
             [
@@ -60,7 +60,7 @@ final class GameOfLifeTest extends TestCase
     /**
      * @test
      */
-    public function it_should_turn_a_dead_cell_to_alive()
+    public function itShouldTurnADeadCellToAlive(): void
     {
         $grid =
             [
@@ -84,7 +84,7 @@ final class GameOfLifeTest extends TestCase
     /**
      * @test
      */
-    public function it_should_turn_two_dead_cell_to_alive_and_kill_one_cell()
+    public function itShouldTurnTwoDeadCellToAliveAndKillOneCell(): void
     {
         $grid =
             [

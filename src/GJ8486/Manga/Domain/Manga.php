@@ -1,6 +1,6 @@
 <?php
 
-namespace Medine\GJ8486\Manga\domain;
+namespace Medine\GJ8486\Manga\Domain;
 
 class Manga
 {
@@ -8,12 +8,12 @@ class Manga
         protected $id,
         protected $nombre,
         protected $autor
-    )
-    {}
+    ) {
+    }
 
-    public static function create(string $id, string $nombre, string $autor,)
+    public static function create(string $id, string $nombre, string $autor)
     {
-        return new self($id, $nombre, $autor,);
+        return new self($id, $nombre, $autor);
     }
 
     public function id()
@@ -30,5 +30,4 @@ class Manga
     {
         return $this->nombre;
     }
-
 }

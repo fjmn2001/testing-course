@@ -2,8 +2,8 @@
 
 namespace Tests\GJ8486\Manga\application;
 
-use Medine\GJ8486\Manga\domain\Manga;
-use Medine\GJ8486\Manga\infrastructure\MangaPersistenceText;
+use Medine\GJ8486\Manga\Domain\Manga;
+use Medine\GJ8486\Manga\Infrastructure\MangaPersistenceText;
 use PHPUnit\Framework\TestCase;
 
 class MangaCreateTest extends TestCase
@@ -17,7 +17,7 @@ class MangaCreateTest extends TestCase
         $nuevo_manga = Manga::create('20202020202', 'Vinland Saga', 'Makoto Yukimura');
         $DB->save($nuevo_manga);
 
-        $this->assertEquals( 1, count($DB->getDB()));
+        $this->assertEquals(1, count($DB->getDB()));
     }
 
     /** @test */
@@ -30,7 +30,6 @@ class MangaCreateTest extends TestCase
 
         $result = $DB->findOne('20202020200');
 
-        $this->assertEquals( 'One Piece', $result->nombre());
+        $this->assertEquals('One Piece', $result->nombre());
     }
-
 }

@@ -10,8 +10,7 @@ final class Pet
         private string $id,
         private string $name,
         private string $age
-    )
-    {
+    ) {
     }
 
     public function id(): string
@@ -33,8 +32,7 @@ final class Pet
         string $id,
         string $name,
         string $age,
-    ): self
-    {
+    ): self {
         return new self(
             $id,
             $name,
