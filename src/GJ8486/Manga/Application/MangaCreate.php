@@ -19,9 +19,4 @@ class MangaCreate
         $manga = Manga::create($request['id'], $request['nombre'], $request['autor']);
         return $this->mangaPresistence->save($manga);
     }
-
-    public function getDB():array
-    {
-        return $this->mangaPresistence->getDB();
-    }
 }
