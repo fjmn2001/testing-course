@@ -7,7 +7,7 @@ use Medine\GJ8486\Manga\Domain\MangaPersistence;
 
 class MangaCreate
 {
-    protected $mangaPresistence;
+    private $mangaPresistence;
 
     public function __construct(MangaPersistence $mangaPresistence)
     {

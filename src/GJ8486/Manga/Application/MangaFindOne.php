@@ -6,7 +6,7 @@ use Medine\GJ8486\Manga\Domain\MangaPersistence;
 
 class MangaFindOne
 {
-    protected $mangaPresistence;
+    private $mangaPresistence;
 
     public function __construct(MangaPersistence $mangaPresistence)
     {

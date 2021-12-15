@@ -7,7 +7,7 @@ use Medine\GJ8486\Manga\Domain\MangaPersistence;
 
 class MangaPersistenceText implements MangaPersistence
 {
-    public $DB = [];
+    private $DB = [];
 
     public function save(Manga $manga)
     {
