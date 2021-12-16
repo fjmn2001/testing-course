@@ -5,9 +5,9 @@ namespace Medine\GJ8486\Manga\Domain;
 class Manga
 {
     public function __construct(
-        protected $id,
-        protected $nombre,
-        protected $autor
+        private $id,
+        private $nombre,
+        private $autor
     ) {
     }
 
