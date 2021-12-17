@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Gibmyx;
+namespace Tests\Gibmyx\Infrastructure\Persistence;
 
-use PHPUnit\Framework\TestCase;
 use Medine\Gibmyx\Domain\Entity\Movie;
 use Medine\Gibmyx\Infrastructure\Persistence\MoviePersistenceRepository;
+use PHPUnit\Framework\TestCase;
 
 class MovieRepositoryTest extends TestCase
 {
