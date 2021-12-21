@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\ChanchitoFeliz\Application;
+namespace Tests\ChanchitoFeliz\Application\Search;
 
-use Medine\ChanchitoFeliz\Application\StudentSearcher;
+use Medine\ChanchitoFeliz\Application\Search\StudentSearcher;
 use Medine\ChanchitoFeliz\Domain\StudentRepository;
 use Mockery;
 use PHPUnit\Framework\TestCase;
@@ -12,12 +12,6 @@ use Tests\ChanchitoFeliz\Domain\StudentMother;
 
 final class StudentSearcherTest extends TestCase
 {
-    protected function tearDown(): void
-    {
-        parent::tearDown();
-        Mockery::close();
-    }
-
     /**
      * @test
      */
@@ -30,7 +24,7 @@ final class StudentSearcherTest extends TestCase
         $repository
             ->shouldReceive('all')
             ->withNoArgs()
-            ->times(1)
+            ->once()
             ->andReturn($allStudents);
 
         $searcher = new StudentSearcher($repository);

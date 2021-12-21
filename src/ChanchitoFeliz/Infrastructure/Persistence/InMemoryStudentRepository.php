@@ -16,7 +16,7 @@ final class InMemoryStudentRepository implements StudentRepository
         $this->students[$student->id()] = $student;
     }
 
-    public function search(string $id): ?Student
+    public function find(string $id): ?Student
     {
         return $this->students[$id] ?? null;
     }
