@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Medine\Daniel\Library\Application;
+namespace Medine\Daniel\Library\Application\Create;
 
 final class BookCreatorRequest
 {

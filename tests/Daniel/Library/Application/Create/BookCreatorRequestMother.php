@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Daniel\Library\Application;
+namespace Tests\Daniel\Library\Application\Create;
 
-use Medine\Daniel\Library\Application\BookCreatorRequest;
+use Medine\Daniel\Library\Application\Create\BookCreatorRequest;
 
 final class BookCreatorRequestMother
 {

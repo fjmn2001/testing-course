@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Medine\Daniel\Library\Application;
+namespace Medine\Daniel\Library\Application\Create;
 
 use Medine\Daniel\Library\Domain\Book;
 use Medine\Daniel\Library\Domain\Contracts\BookRepository;

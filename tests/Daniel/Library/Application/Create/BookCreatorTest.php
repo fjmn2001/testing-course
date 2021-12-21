@@ -2,13 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Daniel\Library\Application;
+namespace Tests\Daniel\Library\Application\Create;
 
-use Medine\Daniel\Library\Application\BookCreator;
+use Medine\Daniel\Library\Application\Create\BookCreator;
 use Medine\Daniel\Library\Domain\Contracts\BookRepository;
 use PHPUnit\Framework\TestCase;
-use Tests\Daniel\Library\Domain\BookMother;
-use Hamcrest\Core\IsIdentical;
 
 final class BookCreatorTest extends TestCase
 {

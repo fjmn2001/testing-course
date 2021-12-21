@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tests\Daniel\Library\Domain;
 
-use Medine\Daniel\Library\Application\BookCreatorRequest;
+use Medine\Daniel\Library\Application\Create\BookCreatorRequest;
 use Medine\Daniel\Library\Domain\Book;
 
 final class BookMother
