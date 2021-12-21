@@ -2,12 +2,11 @@
 
 namespace Tests\GJ8486\Manga\Application;
 
-use Medine\GJ8486\Manga\Application\MangaCreate;
 use Medine\GJ8486\Manga\Application\MangaUpdate;
-use Medine\GJ8486\Manga\Domain\Manga;
 use Medine\GJ8486\Manga\Infrastructure\MangaPersistenceText;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use Tests\GJ8486\Manga\domain\MangaMother;
 
 class MangaUpdateTest extends TestCase
 {
@@ -15,16 +14,22 @@ class MangaUpdateTest extends TestCase
     public function itShuldUpdateAManga(){
 
         $repository = Mockery::mock(MangaPersistenceText::class);
+        $manga = MangaMother::random();
 
-        $repository->shouldReceive('findOne')
-            ->withArgs(['20202020200'])
-            ->andReturn(Manga::create('20202020200', 'One Piece', 'Eiichirō Oda', 'En emisión'));
-
-        $repository->shouldReceive('update')
-            ->andReturn(Manga::create('20202020200', 'One Piece', 'Eiichirō Oda', 'Pausado'));
+        $repository
+            ->shouldReceive('findOne')
+            ->andReturn($manga)
+            ->shouldReceive('update')
+            ->andReturn($manga);
 
         $magaUpdate = new MangaUpdate($repository);
-        $resuld = $magaUpdate([ 'id' => '20202020200', 'nombre' => 'One Piece', 'autor' => 'Eiichirō Oda', 'estado' => 'Pausado']);
+
+        $resuld = $magaUpdate([
+            'id' => $manga->id(),
+            'nombre' => $manga->nombre(),
+            'autor' => $manga->autor(),
+            'estado' => 'Pausado'
+        ]);
 
         $this->assertEquals($resuld->estado(), 'Pausado');
     }
