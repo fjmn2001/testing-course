@@ -24,9 +24,15 @@ class MangaPersistenceText implements MangaPersistence
            ? Manga::create(
                $result[0]->id(),
                $result[0]->nombre(),
-               $result[0]->autor()
+               $result[0]->autor(),
+               $result[0]->estado()
            )
            : [];
+    }
+
+    public function update(Manga $manga)
+    {
+        return [];
     }
 
     public function getDB(): array

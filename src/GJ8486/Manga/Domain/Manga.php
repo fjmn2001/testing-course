@@ -7,13 +7,14 @@ class Manga
     public function __construct(
         private $id,
         private $nombre,
-        private $autor
-    ) {
-    }
+        private $autor,
+        private $estado
+    )
+    {}
 
-    public static function create(string $id, string $nombre, string $autor)
+    public static function create(string $id, string $nombre, string $autor, string $estado)
     {
-        return new self($id, $nombre, $autor);
+        return new self($id, $nombre, $autor, $estado);
     }
 
     public function id()
@@ -29,5 +30,28 @@ class Manga
     public function nombre()
     {
         return $this->nombre;
+    }
+
+    public function estado()
+    {
+        return $this->estado;
+    }
+
+    public function autorChange(string $new_value)
+    {
+        if ($new_value != $this->autor)
+            $this->autor = $new_value;
+    }
+
+    public function nombreChange(string $new_value)
+    {
+        if ($new_value != $this->nombre)
+            $this->nombre = $new_value;
+    }
+
+    public function estadoChange(string $new_value)
+    {
+        if ($new_value != $this->estado)
+            $this->estado = $new_value;
     }
 }

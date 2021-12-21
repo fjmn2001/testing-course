@@ -17,7 +17,7 @@ class MangaFindOneTest extends TestCase
         $repository = Mockery::mock(MangaPersistenceText::class);
         $repository->shouldReceive('findOne')
             ->withArgs(['20202020200'])
-            ->andReturn(Manga::create('20202020200', 'One Piece', 'Eiichirō Oda'));
+            ->andReturn(Manga::create('20202020200', 'One Piece', 'Eiichirō Oda', 'En emisión'));
 
         $findOne = new MangaFindOne($repository);
 

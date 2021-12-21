@@ -2,13 +2,10 @@
 
 namespace Medine\GJ8486\Manga\Application;
 
-use Medine\GJ8486\Manga\Domain\Manga;
 use Medine\GJ8486\Manga\Domain\MangaPersistence;
 
-class MangaCreate
+class MangaUpdate
 {
-    private $mangaPresistence;
-
     public function __construct(MangaPersistence $mangaPresistence)
     {
         $this->mangaPresistence = $mangaPresistence;
@@ -16,7 +13,12 @@ class MangaCreate
 
     public function __invoke(array $request)
     {
-        $manga = Manga::create($request['id'], $request['nombre'], $request['autor'], $request['estado']);
-        return $this->mangaPresistence->save($manga);
+        $manga = $this->mangaPresistence->findOne($request['id']);
+
+        $manga->nombreChange($request['nombre']);
+        $manga->autorChange($request['autor']);
+        $manga->estadoChange($request['estado']);
+
+        return $this->mangaPresistence->update($manga);
     }
 }
