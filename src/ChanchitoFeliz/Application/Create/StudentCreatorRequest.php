@@ -2,20 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Medine\ChanchitoFeliz\Domain;
+namespace Medine\ChanchitoFeliz\Application\Create;
 
-final class Student
+final class StudentCreatorRequest
 {
     public function __construct(
         private string $id,
         private string $name
     )
     {
-    }
-
-    public static function create(string $id, string $name): self
-    {
-        return new self($id, $name);
     }
 
     public function id(): string
