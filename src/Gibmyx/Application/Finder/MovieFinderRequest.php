@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace Medine\Gibmyx\Application;
+namespace Medine\Gibmyx\Application\Finder;
 
 final class MovieFinderRequest
 {
