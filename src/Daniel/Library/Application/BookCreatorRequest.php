@@ -2,26 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Medine\Daniel\Library\Domain;
+namespace Medine\Daniel\Library\Application;
 
-final class Book
+final class BookCreatorRequest
 {
     public function __construct(
         private string $id,
         private string $name,
         private string $author,
         private int $year
-    ) {
-    }
-
-    public static function create(string $id, string $name, string $author, int $year): self
+    )
     {
-        return new self(
-            $id,
-            $name,
-            $author,
-            $year
-        );
     }
 
     public function id(): string
