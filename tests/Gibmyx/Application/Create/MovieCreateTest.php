@@ -28,7 +28,7 @@ final class MovieCreateTest extends TestCase
 
         $repository = Mockery::mock(MovieRepository::class);
         $repository
-            ->shouldReceive('save')
+            ->shouldReceive('save1')
             ->once()
             ->andReturnNull();
 
