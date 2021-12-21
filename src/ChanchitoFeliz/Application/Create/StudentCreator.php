@@ -11,8 +11,7 @@ final class StudentCreator
 {
     public function __construct(
         private StudentRepository $repository
-    )
-    {
+    ) {
     }
 
     public function __invoke(StudentCreatorRequest $request)

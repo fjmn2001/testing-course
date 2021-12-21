@@ -11,8 +11,7 @@ final class StudentFinder
 {
     public function __construct(
         private StudentRepository $repository
-    )
-    {
+    ) {
     }
 
     public function __invoke(StudentFinderRequest $request): StudentFinderResponse

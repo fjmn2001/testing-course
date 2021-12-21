@@ -9,8 +9,7 @@ final class Student
     public function __construct(
         private string $id,
         private string $name
-    )
-    {
+    ) {
     }
 
     public static function create(string $id, string $name): self

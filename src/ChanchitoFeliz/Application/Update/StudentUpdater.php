@@ -11,8 +11,7 @@ final class StudentUpdater
 {
     public function __construct(
         private StudentRepository $repository
-    )
-    {
+    ) {
     }
 
     public function __invoke(StudentUpdaterRequest $request): void

@@ -24,5 +24,4 @@ class MangaFindOneTest extends TestCase
         $result = $findOne('20202020200');
         $this->assertEquals('One Piece', $result->nombre());
     }
-
 }
