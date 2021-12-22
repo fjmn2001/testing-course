@@ -6,6 +6,7 @@ namespace Tests\Gibmyx\Application\Finder;
 
 use Medine\Gibmyx\Application\Finder\MovieFinder;
 use Medine\Gibmyx\Application\Finder\MovieFinderRequest;
+use Medine\Gibmyx\Application\Response\MovieResponse;
 use Medine\Gibmyx\Domain\Contract\MovieRepository;
 use Mockery;
 use PHPUnit\Framework\TestCase;
@@ -25,10 +26,16 @@ final class MovieFinderTest extends TestCase
     public function itShouldFinderMovie(): void
     {
         $movie = MovieMother::random();
+        $movieResponse = new MovieResponse(
+            $movie->id(),
+            $movie->name(),
+            $movie->duration(),
+            $movie->category()
+        );
 
         $repository = Mockery::mock(MovieRepository::class);
         $repository->shouldReceive('find')
-            ->withArgs([$movie->id()])
+            ->withArgs([$movieResponse->id()])
             ->times()
             ->andReturn($movie);
 
@@ -36,6 +43,6 @@ final class MovieFinderTest extends TestCase
 
         $response = ($finder)(new MovieFinderRequest($movie->id()));
 
-        $this->assertEquals($movie, $response);
+        $this->assertEquals($movie->id(), $response->id());
     }
 }

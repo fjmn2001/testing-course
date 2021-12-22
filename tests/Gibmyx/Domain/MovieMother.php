@@ -11,10 +11,10 @@ final class MovieMother
     public static function random(): Movie
     {
         return Movie::create(
-            'custom-id',
-            'custom-name',
-            'custom-duration',
-            'custom-category',
+            (string) mt_rand(),
+            (string) mt_rand(),
+            (string) mt_rand(),
+            (string) mt_rand(),
         );
     }
 

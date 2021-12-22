@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Medine\Gibmyx\Application\Finder;
 
+use Medine\Gibmyx\Application\Response\MovieResponse;
 use Medine\Gibmyx\Domain\Contract\MovieRepository;
 
 final class MovieFinder
@@ -13,7 +14,7 @@ final class MovieFinder
     ) {
     }
 
-    public function __invoke(MovieFinderRequest $request)
+    public function __invoke(MovieFinderRequest $request): MovieResponse
     {
         $movie = $this->repository->find($request->id());
 
@@ -21,6 +22,11 @@ final class MovieFinder
             throw new \Exception("Movie not exits");
         }
 
-        return $movie;
+        return new MovieResponse(
+            $movie->id(),
+            $movie->name(),
+            $movie->duration(),
+            $movie->category()
+        );
     }
 }
