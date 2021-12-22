@@ -17,6 +17,10 @@ final class MovieFinder
     {
         $movie = $this->repository->find($request->id());
 
+        if (is_null($movie)) {
+            throw new \Exception("Movie not exits");
+        }
+
         return $movie;
     }
 }
