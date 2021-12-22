@@ -7,6 +7,7 @@ use Medine\GJ8486\Manga\Domain\Manga;
 use Medine\GJ8486\Manga\Infrastructure\MangaPersistenceText;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use Tests\GJ8486\Manga\domain\MangaMother;
 
 class MangaFindOneTest extends TestCase
 {
@@ -15,14 +16,15 @@ class MangaFindOneTest extends TestCase
     public function itShouldFindAndReturnAManga()
     {
         $repository = Mockery::mock(MangaPersistenceText::class);
+        $manga = MangaMother::random();
+
         $repository->shouldReceive('findOne')
-            ->withArgs(['20202020200'])
-            ->andReturn(Manga::create('20202020200', 'One Piece', 'Eiichirō Oda', 'En emisión'));
+            ->andReturn($manga);
 
         $findOne = new MangaFindOne($repository);
 
         $result = $findOne('20202020200');
-        $this->assertEquals('One Piece', $result->nombre());
+        $this->assertEquals($manga->nombre(), $result->nombre());
     }
 
 }
