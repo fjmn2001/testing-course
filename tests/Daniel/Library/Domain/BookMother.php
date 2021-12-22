@@ -26,11 +26,21 @@ final class BookMother
 
     public static function fromRequest(BookCreatorRequest $request): Book
     {
-        return new Book(
+        return self::create(
             $request->id(),
             $request->name(),
             $request->author(),
             $request->year(),
+        );
+    }
+
+    public static function random(): Book
+    {
+        return self::create(
+            'db4799af-3712-4235-853c-967a451bd7b9',
+            'El principito',
+            'Antoine de Saint-Exupéry',
+            1943
         );
     }
 }
