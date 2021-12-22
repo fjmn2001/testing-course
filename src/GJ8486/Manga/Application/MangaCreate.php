@@ -17,6 +17,6 @@ class MangaCreate
     public function __invoke(array $request)
     {
         $manga = Manga::create($request['id'], $request['nombre'], $request['autor'], $request['estado']);
-        return $this->mangaPresistence->save($manga);
+        $this->mangaPresistence->save($manga);
     }
 }

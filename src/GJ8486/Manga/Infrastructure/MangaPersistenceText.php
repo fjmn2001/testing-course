@@ -32,7 +32,7 @@ class MangaPersistenceText implements MangaPersistence
 
     public function update(Manga $manga)
     {
-        return [];
+
     }
 
     public function getDB(): array

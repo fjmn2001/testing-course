@@ -19,6 +19,6 @@ class MangaUpdate
         $manga->autorChange($request['autor']);
         $manga->estadoChange($request['estado']);
 
-        return $this->mangaPresistence->update($manga);
+        $this->mangaPresistence->update($manga);
     }
 }

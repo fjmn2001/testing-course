@@ -24,14 +24,14 @@ class MangaUpdateTest extends TestCase
 
         $magaUpdate = new MangaUpdate($repository);
 
-        $resuld = $magaUpdate([
+        $magaUpdate([
             'id' => $manga->id(),
             'nombre' => $manga->nombre(),
             'autor' => $manga->autor(),
             'estado' => 'Pausado'
         ]);
 
-        $this->assertEquals($resuld->estado(), 'Pausado');
+        $this->assertEquals($manga->estado(), 'Pausado');
     }
 
 }
