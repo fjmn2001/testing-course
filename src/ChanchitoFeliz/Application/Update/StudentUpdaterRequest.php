@@ -2,19 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Medine\ChanchitoFeliz\Domain;
+namespace Medine\ChanchitoFeliz\Application\Update;
 
-final class Student
+final class StudentUpdaterRequest
 {
     public function __construct(
         private string $id,
         private string $name
     ) {
-    }
-
-    public static function create(string $id, string $name): self
-    {
-        return new self($id, $name);
     }
 
     public function id(): string
@@ -25,10 +20,5 @@ final class Student
     public function name(): string
     {
         return $this->name;
-    }
-
-    public function changeName(string $newName): void
-    {
-        $this->name = $newName;
     }
 }

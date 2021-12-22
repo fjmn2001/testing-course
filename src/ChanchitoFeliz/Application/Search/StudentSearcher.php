@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Medine\ChanchitoFeliz\Application;
+namespace Medine\ChanchitoFeliz\Application\Search;
 
 use Medine\ChanchitoFeliz\Domain\StudentRepository;
 

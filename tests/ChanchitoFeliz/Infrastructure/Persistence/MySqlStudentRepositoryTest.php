@@ -38,7 +38,7 @@ final class MySqlStudentRepositoryTest extends TestCase
         );
         ($repository)->save($newStudent);
 
-        $findedStudent = ($repository)->search($customId);
+        $findedStudent = ($repository)->find($customId);
 
         self::assertEquals($findedStudent, $newStudent);
     }
@@ -51,7 +51,7 @@ final class MySqlStudentRepositoryTest extends TestCase
         $repository = new InMemoryStudentRepository();
         $customId = 'random-id';
 
-        $findedStudent = ($repository)->search($customId);
+        $findedStudent = ($repository)->find($customId);
 
         self::assertNull($findedStudent);
     }
