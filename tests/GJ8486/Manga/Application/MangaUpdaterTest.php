@@ -2,13 +2,13 @@
 
 namespace Tests\GJ8486\Manga\Application;
 
-use Medine\GJ8486\Manga\Application\MangaUpdate;
+use Medine\GJ8486\Manga\Application\MangaUpdater;
 use Medine\GJ8486\Manga\Infrastructure\MangaPersistenceText;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use Tests\GJ8486\Manga\domain\MangaMother;
 
-class MangaUpdateTest extends TestCase
+class MangaUpdaterTest extends TestCase
 {
     /** @test */
     public function itShuldUpdateAManga(){
@@ -22,7 +22,7 @@ class MangaUpdateTest extends TestCase
             ->shouldReceive('update')
             ->andReturn($manga);
 
-        $magaUpdate = new MangaUpdate($repository);
+        $magaUpdate = new MangaUpdater($repository);
 
         $magaUpdate([
             'id' => $manga->id(),

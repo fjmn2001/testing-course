@@ -4,20 +4,20 @@ namespace Medine\GJ8486\Manga\Application;
 
 use Medine\GJ8486\Manga\Domain\MangaPersistence;
 
-class MangaUpdate
+class MangaUpdater
 {
     public function __construct(MangaPersistence $mangaPresistence)
     {
         $this->mangaPresistence = $mangaPresistence;
     }
 
-    public function __invoke(array $request)
+    public function __invoke(array $request): void
     {
         $manga = $this->mangaPresistence->findOne($request['id']);
 
-        $manga->nombreChange($request['nombre']);
-        $manga->autorChange($request['autor']);
-        $manga->estadoChange($request['estado']);
+        $manga->changeAutor($request['nombre']);
+        $manga->changeNombre($request['autor']);
+        $manga->changeEstado($request['estado']);
 
         $this->mangaPresistence->update($manga);
     }

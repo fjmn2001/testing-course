@@ -9,12 +9,12 @@ class MangaPersistenceText implements MangaPersistence
 {
     private $DB = [];
 
-    public function save(Manga $manga)
+    public function save(Manga $manga): void
     {
         $this->DB[] = $manga;
     }
 
-    public function findOne(string $id)
+    public function findOne(string $id): ?Manga
     {
         $result = array_merge(array_filter($this->DB, function ($m) use ($id) {
             return ($m->id() == $id);
@@ -27,10 +27,10 @@ class MangaPersistenceText implements MangaPersistence
                $result[0]->autor(),
                $result[0]->estado()
            )
-           : [];
+           : Null;
     }
 
-    public function update(Manga $manga)
+    public function update(Manga $manga): void
     {
 
     }

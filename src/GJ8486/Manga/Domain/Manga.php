@@ -37,19 +37,19 @@ class Manga
         return $this->estado;
     }
 
-    public function autorChange(string $new_value)
+    public function changeAutor(string $new_value)
     {
         if ($new_value != $this->autor)
             $this->autor = $new_value;
     }
 
-    public function nombreChange(string $new_value)
+    public function changeNombre(string $new_value)
     {
         if ($new_value != $this->nombre)
             $this->nombre = $new_value;
     }
 
-    public function estadoChange(string $new_value)
+    public function changeEstado(string $new_value)
     {
         if ($new_value != $this->estado)
             $this->estado = $new_value;
