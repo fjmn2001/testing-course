@@ -22,4 +22,9 @@ final class InMemoryBookRepository implements BookRepository
 
         return $book[0];
     }
+
+    public function update(Book $book): void
+    {
+        // TODO: Implement update() method.
+    }
 }

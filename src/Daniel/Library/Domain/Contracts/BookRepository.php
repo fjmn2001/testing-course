@@ -11,4 +11,6 @@ interface BookRepository
     public function create(Book $book): void;
 
     public function find(string $id): ?Book;
+
+    public function update(Book $book): void;
 }

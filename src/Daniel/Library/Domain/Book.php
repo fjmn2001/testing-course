@@ -43,4 +43,19 @@ final class Book
     {
         return $this->year;
     }
+
+    public function changeName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    public function changeAuthor(string $author): void
+    {
+        $this->author = $author;
+    }
+
+    public function changeYear(int $year): void
+    {
+        $this->year = $year;
+    }
 }
