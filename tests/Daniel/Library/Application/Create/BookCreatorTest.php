@@ -24,7 +24,7 @@ final class BookCreatorTest extends TestCase
         $request    = BookCreatorRequestMother::random();
         $repository = \Mockery::mock(BookRepository::class);
 
-        $repository->shouldReceive('save')
+        $repository->shouldReceive('create')
             ->once()
             ->andReturnNull();
 

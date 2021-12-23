@@ -22,6 +22,6 @@ final class BookCreator
             $request->year(),
         );
 
-        $this->repository->save($book);
+        $this->repository->create($book);
     }
 }

@@ -11,7 +11,7 @@ final class InMemoryBookRepository implements BookRepository
 {
     private array $books;
 
-    public function save(Book $book): void
+    public function create(Book $book): void
     {
         $this->books[] = $book;
     }

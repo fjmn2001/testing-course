@@ -30,7 +30,7 @@ final class BookRepositoryTest extends TestCase
             1943
         );
 
-        $this->assertNull($this->repository->save($book));
+        $this->assertNull($this->repository->create($book));
     }
 
     /**
@@ -47,7 +47,7 @@ final class BookRepositoryTest extends TestCase
             1943
         );
 
-        $this->repository->save($book);
+        $this->repository->create($book);
 
         $this->assertEquals($book, $this->repository->find($id));
     }
