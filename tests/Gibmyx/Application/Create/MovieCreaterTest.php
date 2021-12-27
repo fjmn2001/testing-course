@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Tests\Gibmyx\Application\Create;
 
-use Medine\Gibmyx\Application\Create\MovieCreate;
-use Medine\Gibmyx\Application\Create\MovieCreateRequest;
+use Medine\Gibmyx\Application\Create\MovieCreater;
+use Medine\Gibmyx\Application\Create\MovieCreaterRequest;
 use Medine\Gibmyx\Domain\Contract\MovieRepository;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use Tests\Gibmyx\Domain\MovieMother;
 
-final class MovieCreateTest extends TestCase
+final class MovieCreaterTest extends TestCase
 {
     protected function tearDown(): void
     {
@@ -32,8 +32,8 @@ final class MovieCreateTest extends TestCase
             ->once()
             ->andReturnNull();
 
-        $create = new MovieCreate($repository);
-        ($create)(new MovieCreateRequest(
+        $create = new MovieCreater($repository);
+        ($create)(new MovieCreaterRequest(
             $movie->id(),
             $movie->name(),
             $movie->duration(),

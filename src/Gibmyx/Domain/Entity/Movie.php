@@ -34,21 +34,21 @@ final class Movie
         return $this->category;
     }
 
-    public function nameChange($newName): void
+    public function changeName($newName): void
     {
         if ($this->name != $newName) {
             $this->name = $newName;
         }
     }
 
-    public function durationChange($newDuration): void
+    public function changeDuration($newDuration): void
     {
         if ($this->duration != $newDuration) {
             $this->duration = $newDuration;
         }
     }
 
-    public function categoryChange($newCategory): void
+    public function changgeCategory($newCategory): void
     {
         if ($this->category != $newCategory) {
             $this->category = $newCategory;

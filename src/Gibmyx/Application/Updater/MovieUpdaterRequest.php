@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Medine\Gibmyx\Application\Create;
+namespace Medine\Gibmyx\Application\Updater;
 
-final class MovieCreateRequest
+final class MovieUpdaterRequest
 {
     public function __construct(
         private string $id,
         private string $name,
         private string $duration,
-        private string $category,
+        private string $category
     ) {
     }
 

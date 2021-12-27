@@ -6,14 +6,14 @@ namespace Medine\Gibmyx\Application\Updater;
 
 use Medine\Gibmyx\Domain\Contract\MovieRepository;
 
-final class MovieUpdate
+final class MovieUpdater
 {
     public function __construct(
         private MovieRepository $repository
     ) {
     }
 
-    public function __invoke(MovieUpdateRequest $request): void
+    public function __invoke(MovieUpdaterRequest $request): void
     {
         $movie = $this->repository->find($request->id());
 
@@ -21,9 +21,9 @@ final class MovieUpdate
             throw new \Exception("Movie not exits");
         }
 
-        $movie->nameChange($request->name());
-        $movie->durationChange($request->duration());
-        $movie->categoryChange($request->category());
+        $movie->changeName($request->name());
+        $movie->changeDuration($request->duration());
+        $movie->changgeCategory($request->category());
 
         $this->repository->update($movie);
     }
