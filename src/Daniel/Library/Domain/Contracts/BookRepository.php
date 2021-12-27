@@ -8,7 +8,9 @@ use Medine\Daniel\Library\Domain\Book;
 
 interface BookRepository
 {
-    public function save(Book $book): void;
+    public function create(Book $book): void;
 
     public function find(string $id): ?Book;
+
+    public function update(Book $book): void;
 }
