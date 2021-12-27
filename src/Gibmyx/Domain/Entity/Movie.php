@@ -6,21 +6,12 @@ namespace Medine\Gibmyx\Domain\Entity;
 
 final class Movie
 {
-    private string $id;
-    private string $name;
-    private string $duration;
-    private string $category;
-
     private function __construct(
-        string $id,
-        string $name,
-        string $duration,
-        string $category
+        private string $id,
+        private string $name,
+        private string $duration,
+        private string $category
     ) {
-        $this->id = $id;
-        $this->name = $name;
-        $this->duration = $duration;
-        $this->category = $category;
     }
 
     public function id(): string
@@ -41,6 +32,27 @@ final class Movie
     public function category(): string
     {
         return $this->category;
+    }
+
+    public function changeName($newName): void
+    {
+        if ($this->name != $newName) {
+            $this->name = $newName;
+        }
+    }
+
+    public function changeDuration($newDuration): void
+    {
+        if ($this->duration != $newDuration) {
+            $this->duration = $newDuration;
+        }
+    }
+
+    public function changgeCategory($newCategory): void
+    {
+        if ($this->category != $newCategory) {
+            $this->category = $newCategory;
+        }
     }
 
     public static function create(
