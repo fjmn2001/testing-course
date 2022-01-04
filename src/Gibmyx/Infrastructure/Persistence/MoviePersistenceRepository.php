@@ -21,6 +21,11 @@ final class MoviePersistenceRepository implements MovieRepository
         ]);
     }
 
+    public function update(Movie $movie): void
+    {
+        // TODO: Implement update() method.
+    }
+
     public function find(string $id): ?Movie
     {
         $indice = array_search($id, array_column($this->DB, 'id'), true);

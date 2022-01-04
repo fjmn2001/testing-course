@@ -7,7 +7,9 @@ use Medine\Gibmyx\Domain\Entity\Movie;
 interface MovieRepository
 {
 
-    public function save(Movie $movie);
+    public function save(Movie $movie): void;
+
+    public function update(Movie $movie): void;
 
     public function find(string $id): ?Movie;
 

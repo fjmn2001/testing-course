@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
+namespace Medine\Daniel\Library\Application\Find;
 
-namespace Medine\Gibmyx\Application;
-
-final class MovieFinderRequest
+final class BookFinderRequest
 {
     public function __construct(
         private string $id
-    ) {
+    )
+    {
     }
 
     public function id(): string

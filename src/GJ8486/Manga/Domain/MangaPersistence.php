@@ -6,4 +6,5 @@ interface MangaPersistence
 {
     public function save(Manga $manga);
     public function findOne(string $id);
+    public function update(Manga $manga);
 }
