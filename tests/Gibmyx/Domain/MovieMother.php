@@ -15,6 +15,7 @@ final class MovieMother
             (string) mt_rand(),
             (string) mt_rand(),
             (string) mt_rand(),
+            (string) mt_rand(),
         );
     }
 
@@ -25,6 +26,7 @@ final class MovieMother
             "Titanic",
             "03:14",
             "Drama, Romance",
+            "1997-12-17"
         );
     }
 
@@ -35,6 +37,7 @@ final class MovieMother
             "El Señor De Los Anillos",
             "02:58",
             "Guerra",
+            "2001-12-19"
         );
     }
 
@@ -45,6 +48,7 @@ final class MovieMother
             "armageddon",
             "02:30",
             "Drama, Romance",
+            "1998-06-30"
         );
     }
 }

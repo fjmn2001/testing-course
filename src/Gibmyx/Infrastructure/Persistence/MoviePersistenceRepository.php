@@ -18,6 +18,7 @@ final class MoviePersistenceRepository implements MovieRepository
             'name' => $movie->name(),
             'duration' => $movie->duration(),
             'category' => $movie->category(),
+            'releaseDate' => $movie->releaseDate(),
         ]);
     }
 
@@ -36,7 +37,8 @@ final class MoviePersistenceRepository implements MovieRepository
                 $this->DB[$indice]['id'],
                 $this->DB[$indice]['name'],
                 $this->DB[$indice]['duration'],
-                $this->DB[$indice]['category']
+                $this->DB[$indice]['category'],
+                $this->DB[$indice]['releaseDate']
             );
     }
 

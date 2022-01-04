@@ -37,7 +37,8 @@ final class MovieCreaterTest extends TestCase
             $movie->id(),
             $movie->name(),
             $movie->duration(),
-            $movie->category()
+            $movie->category(),
+            $movie->releaseDate()
         ));
     }
 }

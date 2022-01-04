@@ -30,7 +30,8 @@ final class MovieFinderTest extends TestCase
             $movie->id(),
             $movie->name(),
             $movie->duration(),
-            $movie->category()
+            $movie->category(),
+            $movie->releaseDate()
         );
 
         $repository = Mockery::mock(MovieRepository::class);

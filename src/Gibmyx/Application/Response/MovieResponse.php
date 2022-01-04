@@ -10,7 +10,8 @@ final class MovieResponse
         private string $id,
         private string $name,
         private string $duration,
-        private string $category
+        private string $category,
+        private string $releaseDate
     ) {
     }
 
@@ -32,5 +33,10 @@ final class MovieResponse
     public function category(): string
     {
         return $this->category;
+    }
+
+    public function releaseDate(): string
+    {
+        return $this->releaseDate;
     }
 }
