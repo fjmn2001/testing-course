@@ -9,8 +9,8 @@ class Manga
         private string $nombre,
         private string $autor,
         private string $estado
-    )
-    {}
+    ) {
+    }
 
     public static function create(string $id, string $nombre, string $autor, string $estado): Manga
     {
