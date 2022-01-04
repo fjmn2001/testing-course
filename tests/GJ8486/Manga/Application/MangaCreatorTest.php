@@ -14,7 +14,7 @@ class MangaCreatorTest extends TestCase
     {
         $repository = new MangaPersistenceText;
         $aplication = new MangaCreator($repository);
-        $nuevo_manga = [ 'id' => '20202020202', 'nombre' => 'Vinland Saga', 'autor' => 'Makoto Yukimura', 'estado' => 'En emisión'];
+        $nuevo_manga = ['id' => '20202020202', 'nombre' => 'Vinland Saga', 'autor' => 'Makoto Yukimura', 'estado' => 'En emisión'];
         $aplication($nuevo_manga);
 
         $this->assertEquals(1, count($repository->getDB()));

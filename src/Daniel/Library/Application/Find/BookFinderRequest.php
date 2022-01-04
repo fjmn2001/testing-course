@@ -8,8 +8,7 @@ final class BookFinderRequest
 {
     public function __construct(
         private string $id
-    )
-    {
+    ) {
     }
 
     public function id(): string
