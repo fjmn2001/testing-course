@@ -27,12 +27,11 @@ class MangaPersistenceText implements MangaPersistence
                $result[0]->autor(),
                $result[0]->estado()
            )
-           : Null;
+           : null;
     }
 
     public function update(Manga $manga): void
     {
-
     }
 
     public function getDB(): array

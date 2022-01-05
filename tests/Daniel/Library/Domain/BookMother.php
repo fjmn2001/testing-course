@@ -14,8 +14,7 @@ final class BookMother
         string $name,
         string $author,
         int $year
-    ): Book
-    {
+    ): Book {
         return new Book(
             $id,
             $name,
