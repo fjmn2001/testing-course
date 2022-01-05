@@ -55,5 +55,4 @@ final class ApiContext implements Context
             $response->id()
         );
     }
-
 }
