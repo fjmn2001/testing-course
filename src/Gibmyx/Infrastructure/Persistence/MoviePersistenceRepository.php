@@ -52,4 +52,9 @@ final class MoviePersistenceRepository implements MovieRepository
     {
         return $this->DB;
     }
+
+    public function now(): \DateTimeImmutable
+    {
+        return new \DateTimeImmutable();
+    }
 }
