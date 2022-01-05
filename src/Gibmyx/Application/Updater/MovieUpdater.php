@@ -23,7 +23,7 @@ final class MovieUpdater
 
         $movie->changeName($request->name());
         $movie->changeDuration($request->duration());
-        $movie->changgeCategory($request->category());
+        $movie->changeCategory($request->category());
 
         $this->repository->update($movie);
     }

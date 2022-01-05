@@ -29,7 +29,8 @@ final class MovieUpdaterTest extends TestCase
             $movie->id(),
             $movie->name(),
             $movie->duration(),
-            "fantasy"
+            "fantasy",
+            $movie->releaseDate()
         );
         $repository = Mockery::mock(MovieRepository::class);
 

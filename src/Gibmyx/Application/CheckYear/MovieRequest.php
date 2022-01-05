@@ -2,10 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Medine\Gibmyx\Application\Create;
 
-final class MovieCreaterRequest
+namespace Medine\Gibmyx\Application\CheckYear;
+
+
+final class MovieRequest
 {
+
     public function __construct(
         private string $id,
         private string $name,

@@ -20,7 +20,8 @@ final class MovieCreater
             $request->id(),
             $request->name(),
             $request->duration(),
-            $request->category()
+            $request->category(),
+            $request->releaseDate()
         );
 
         $this->repository->save($movie);
