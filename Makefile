@@ -13,13 +13,13 @@ down:
 	docker-compose down -v
 
 .PHONY: deps
-deps:
-	docker-compose exec app composer install
+deps: start
+	docker exec testing-course-app composer install
 
 .PHONY: test
-test:
-	docker-compose exec app composer test
+test: start
+	docker exec testing-course-app composer test
 
 .PHONY: fix-style
 fix-style:
-	docker-compose exec app composer fix-style
+	docker exec testing-course-app composer fix-style
