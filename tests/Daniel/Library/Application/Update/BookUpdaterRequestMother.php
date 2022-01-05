@@ -14,8 +14,7 @@ final class BookUpdaterRequestMother
         string $name,
         string $author,
         int $year
-    ): BookUpdaterRequest
-    {
+    ): BookUpdaterRequest {
         return new BookUpdaterRequest(
             $id,
             $name,

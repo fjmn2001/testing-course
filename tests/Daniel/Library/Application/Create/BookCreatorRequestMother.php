@@ -13,8 +13,7 @@ final class BookCreatorRequestMother
         string $name,
         string $author,
         int $year
-    ): BookCreatorRequest
-    {
+    ): BookCreatorRequest {
         return new BookCreatorRequest(
             $id,
             $name,

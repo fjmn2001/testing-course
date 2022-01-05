@@ -3,7 +3,6 @@
 namespace Tests\GJ8486\Manga\Application;
 
 use Medine\GJ8486\Manga\Application\MangaFindOne;
-use Medine\GJ8486\Manga\Domain\Manga;
 use Medine\GJ8486\Manga\Infrastructure\MangaPersistenceText;
 use Mockery;
 use PHPUnit\Framework\TestCase;
@@ -13,7 +12,7 @@ class MangaFindOneTest extends TestCase
 {
 
     /** @test */
-    public function itShouldFindAndReturnAManga()
+    public function itShouldFindAndReturnAManga(): void
     {
         $repository = Mockery::mock(MangaPersistenceText::class);
         $manga = MangaMother::random();
