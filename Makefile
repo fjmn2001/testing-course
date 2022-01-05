@@ -13,7 +13,7 @@ down:
 	docker-compose down -v
 
 .PHONY: deps
-deps:
+deps: start
 	docker-compose exec app composer install
 
 .PHONY: test
