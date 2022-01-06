@@ -2,12 +2,11 @@
 
 namespace Tests\GJ8486\Manga\Application\FreeTrialTime;
 
-
-use Medine\GJ8486\Manga\Application\FreeTrialTime\ValidateFreeTrialTime;
+use Medine\GJ8486\Manga\Application\FreeTrialTime\FreeTrialTimeValidator;
 use Medine\GJ8486\Manga\Domain\Clock\Clock;
 use PHPUnit\Framework\TestCase;
 
-class ValidateFreeTrialTimeTest extends TestCase
+class FreeTrialTimeValidatorTest extends TestCase
 {
     /** @test */
     public function itShouldCheckFreeTrialTimeIsValid()
@@ -23,7 +22,7 @@ class ValidateFreeTrialTimeTest extends TestCase
             ->shouldReceive('limitDate')
             ->andReturn($limitDate);
 
-        $validation = new ValidateFreeTrialTime($repository);
+        $validation = new FreeTrialTimeValidator($repository);
         $result = ($validation)();
 
         $this->assertTrue($result);
@@ -43,7 +42,7 @@ class ValidateFreeTrialTimeTest extends TestCase
             ->shouldReceive('limitDate')
             ->andReturn($limitDate);
 
-        $validation = new ValidateFreeTrialTime($repository);
+        $validation = new FreeTrialTimeValidator($repository);
         $result = ($validation)();
 
         $this->assertFalse($result);

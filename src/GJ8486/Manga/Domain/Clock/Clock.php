@@ -8,5 +8,4 @@ interface Clock
 {
     public function currentDate(): DateTimeImmutable;
     public function limitDate(): DateTimeImmutable;
-
 }

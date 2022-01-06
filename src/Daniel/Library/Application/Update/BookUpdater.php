@@ -11,8 +11,7 @@ final class BookUpdater
 {
     public function __construct(
         private BookRepository $repository
-    )
-    {
+    ) {
     }
 
     public function __invoke(BookUpdaterRequest $request)

@@ -11,7 +11,8 @@ use Tests\GJ8486\Manga\domain\MangaMother;
 class MangaUpdaterTest extends TestCase
 {
     /** @test */
-    public function itShuldUpdateAManga(){
+    public function itShouldUpdateAManga()
+    {
 
         $repository = Mockery::mock(MangaPersistenceText::class);
         $manga = MangaMother::random();
@@ -33,5 +34,4 @@ class MangaUpdaterTest extends TestCase
 
         $this->assertEquals($manga->estado(), 'Pausado');
     }
-
 }

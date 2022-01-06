@@ -4,10 +4,11 @@ namespace Medine\GJ8486\Manga\Application\FreeTrialTime;
 
 use Medine\GJ8486\Manga\Domain\Clock\Clock;
 
-class ValidateFreeTrialTime
+class FreeTrialTimeValidator
 {
-    public function __construct( private Clock $repository)
-    {}
+    public function __construct(private Clock $repository)
+    {
+    }
 
     public function __invoke(): bool
     {
@@ -16,5 +17,4 @@ class ValidateFreeTrialTime
 
         return $currentDate <= $limitDate;
     }
-
 }
