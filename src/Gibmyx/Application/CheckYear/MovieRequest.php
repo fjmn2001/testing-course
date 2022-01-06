@@ -5,7 +5,6 @@ declare(strict_types=1);
 
 namespace Medine\Gibmyx\Application\CheckYear;
 
-
 final class MovieRequest
 {
 

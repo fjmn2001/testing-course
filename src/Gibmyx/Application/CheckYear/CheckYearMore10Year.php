@@ -5,14 +5,13 @@ declare(strict_types=1);
 
 namespace Medine\Gibmyx\Application\CheckYear;
 
-
 use Medine\Gibmyx\Domain\Contract\MovieRepository;
 
 final class CheckYearMore10Year
 {
 
     public function __construct(
-      private MovieRepository $repository
+        private MovieRepository $repository
     ) {
     }
 
