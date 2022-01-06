@@ -1,0 +1,6 @@
+chanchito_feliz_backend:
+  suites:
+    health_check:
+      paths: [ apps/ChanchitoFeliz/backend/tests/features/students ]
+      contexts:
+        - Tests\ChanchitoFeliz\Infrastructure\Behat\ApiContext

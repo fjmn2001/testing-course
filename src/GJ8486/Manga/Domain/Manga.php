@@ -5,15 +5,14 @@ namespace Medine\GJ8486\Manga\Domain;
 class Manga
 {
     public function __construct(
-        private $id,
-        private $nombre,
-        private $autor,
-        private $estado
+        private string $id,
+        private string $nombre,
+        private string $autor,
+        private string $estado
     ) {
     }
-    
 
-    public static function create(string $id, string $nombre, string $autor, string $estado)
+    public static function create(string $id, string $nombre, string $autor, string $estado): Manga
     {
         return new self($id, $nombre, $autor, $estado);
     }

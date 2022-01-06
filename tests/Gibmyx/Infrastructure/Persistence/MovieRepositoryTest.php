@@ -47,13 +47,15 @@ class MovieRepositoryTest extends TestCase
                 'id' => $movie2->id(),
                 'name' => $movie2->name(),
                 'duration' => $movie2->duration(),
-                'category' => $movie2->category()
+                'category' => $movie2->category(),
+                'releaseDate' => $movieResult->releaseDate()
             ],
             [
                 'id' => $movieResult->id(),
                 'name' => $movieResult->name(),
                 'duration' => $movieResult->duration(),
-                'category' => $movieResult->category()
+                'category' => $movieResult->category(),
+                'releaseDate' => $movieResult->releaseDate()
             ]
         );
     }
@@ -85,6 +87,7 @@ class MovieRepositoryTest extends TestCase
             "Titanic",
             "03:14",
             "Drama, Romance",
+            "1997-12-17"
         );
     }
 
@@ -95,6 +98,7 @@ class MovieRepositoryTest extends TestCase
             "El Señor De Los Anillos",
             "02:58",
             "Guerra",
+            "2001-12-19"
         );
     }
 
@@ -105,6 +109,7 @@ class MovieRepositoryTest extends TestCase
             "armageddon",
             "02:30",
             "Drama, Romance",
+            "1998-06-30"
         );
     }
 }

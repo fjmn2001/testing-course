@@ -26,7 +26,8 @@ final class MovieFinder
             $movie->id(),
             $movie->name(),
             $movie->duration(),
-            $movie->category()
+            $movie->category(),
+            $movie->releaseDate()
         );
     }
 }

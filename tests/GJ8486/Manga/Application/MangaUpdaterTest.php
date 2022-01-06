@@ -13,7 +13,6 @@ class MangaUpdaterTest extends TestCase
     /** @test */
     public function itShouldUpdateAManga()
     {
-
         $repository = Mockery::mock(MangaPersistenceText::class);
         $manga = MangaMother::random();
 

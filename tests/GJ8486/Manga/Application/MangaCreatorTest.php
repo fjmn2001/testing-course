@@ -21,7 +21,6 @@ class MangaCreatorTest extends TestCase
             'estado' => 'En emisión'];
         $application($nuevo_manga);
 
-
         $this->assertEquals(1, count($repository->getDB()));
     }
 }

@@ -10,7 +10,8 @@ final class Movie
         private string $id,
         private string $name,
         private string $duration,
-        private string $category
+        private string $category,
+        private string $releaseDate
     ) {
     }
 
@@ -34,6 +35,11 @@ final class Movie
         return $this->category;
     }
 
+    public function releaseDate(): string
+    {
+        return $this->releaseDate;
+    }
+
     public function changeName($newName): void
     {
         if ($this->name != $newName) {
@@ -48,10 +54,17 @@ final class Movie
         }
     }
 
-    public function changgeCategory($newCategory): void
+    public function changeCategory($newCategory): void
     {
         if ($this->category != $newCategory) {
             $this->category = $newCategory;
+        }
+    }
+
+    public function changeReleaseDate($newReleaseDate): void
+    {
+        if ($this->releaseDate != $newReleaseDate) {
+            $this->releaseDate = $newReleaseDate;
         }
     }
 
@@ -59,13 +72,15 @@ final class Movie
         string $id,
         string $name,
         string $duration,
-        string $category
+        string $category,
+        string $releaseDate
     ): self {
         return new self(
             $id,
             $name,
             $duration,
-            $category
+            $category,
+            $releaseDate
         );
     }
 }
