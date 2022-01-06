@@ -1,13 +1,13 @@
 <?php
 
-namespace Tests\GJ8486\Manga\Application\FreeTrialTimeCheck;
+namespace Tests\GJ8486\Manga\Application\FreeTrialTime;
 
 
 use Medine\GJ8486\Manga\Application\FreeTrialTime\ValidateFreeTrialTime;
 use Medine\GJ8486\Manga\Domain\Clock\Clock;
 use PHPUnit\Framework\TestCase;
 
-class FreeTrialTimeCheckTest extends TestCase
+class ValidateFreeTrialTimeTest extends TestCase
 {
     /** @test */
     public function itShouldCheckFreeTrialTimeIsValid()
