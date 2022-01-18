@@ -13,13 +13,13 @@ final class MoviePersistenceRepository implements MovieRepository
 
     public function save(Movie $movie): void
     {
-        array_push($this->DB, [
+        $this->DB[$movie->id()] = [
             'id' => $movie->id(),
             'name' => $movie->name(),
             'duration' => $movie->duration(),
             'category' => $movie->category(),
             'releaseDate' => $movie->releaseDate(),
-        ]);
+        ];
     }
 
     public function update(Movie $movie): void
@@ -29,23 +29,25 @@ final class MoviePersistenceRepository implements MovieRepository
 
     public function find(string $id): ?Movie
     {
-        $indice = array_search($id, array_column($this->DB, 'id'), true);
-
-        return $indice == false
+        $exits = key_exists($id, $this->DB);
+        return $exits == false
             ? null
             : Movie::create(
-                $this->DB[$indice]['id'],
-                $this->DB[$indice]['name'],
-                $this->DB[$indice]['duration'],
-                $this->DB[$indice]['category'],
-                $this->DB[$indice]['releaseDate']
+                $this->DB[$id]['id'],
+                $this->DB[$id]['name'],
+                $this->DB[$id]['duration'],
+                $this->DB[$id]['category'],
+                $this->DB[$id]['releaseDate']
             );
     }
 
     public function delete(string $id): void
     {
-        $indice = array_search($id, array_column($this->DB, 'id'), true);
-        unset($this->DB[$indice]);
+        if (!key_exists($id, $this->DB)) {
+            return;
+        }
+
+        unset($this->DB[$id]);
     }
 
     public function getDb(): array
