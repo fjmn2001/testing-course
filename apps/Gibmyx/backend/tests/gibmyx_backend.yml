@@ -1,0 +1,6 @@
+gibmyx_backend:
+  suites:
+    health_check:
+      paths: [ apps/Gibmyx/backend/tests/features/movies ]
+      contexts:
+        - Tests\Gibmyx\Infrastructure\Behat\ApiContext

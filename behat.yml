@@ -1,2 +1,3 @@
 imports:
   - apps/ChanchitoFeliz/backend/tests/chachito_feliz_backend.yml
+  - apps/Gibmyx/backend/tests/gibmyx_backend.yml
