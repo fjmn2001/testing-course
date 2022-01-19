@@ -3,4 +3,4 @@ daniel_backend:
     health_check:
       paths: [ apps/Daniel/backend/tests/features/books ]
       contexts:
-        - Tests\Daniel\Infrastructure\Behat\ApiContext
+        - Tests\Daniel\Library\Infrastructure\Behat\ApiContext

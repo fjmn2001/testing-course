@@ -36,7 +36,8 @@
             "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
             "phpunit --configuration phpunit.xml",
             "vendor/bin/behat --format=progress -p chanchito_feliz_backend",
-            "vendor/bin/behat --format=progress -p gibmyx_backend"
+            "vendor/bin/behat --format=progress -p gibmyx_backend",
+            "vendor/bin/behat --format=progress -p daniel_backend"
         ]
     }
 }
