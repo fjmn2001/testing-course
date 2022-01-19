@@ -37,7 +37,8 @@
             "phpunit --configuration phpunit.xml",
             "vendor/bin/behat --format=progress -p chanchito_feliz_backend",
             "vendor/bin/behat --format=progress -p gibmyx_backend",
-            "vendor/bin/behat --format=progress -p manga_backend"
+            "vendor/bin/behat --format=progress -p manga_backend",
+            "vendor/bin/behat --format=progress -p daniel_backend"
         ]
     }
 }

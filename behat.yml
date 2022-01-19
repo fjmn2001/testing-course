@@ -2,3 +2,4 @@ imports:
   - apps/ChanchitoFeliz/backend/tests/chachito_feliz_backend.yml
   - apps/Gibmyx/backend/tests/gibmyx_backend.yml
   - apps/GJ8486/backend/tests/manga_backend.yml
+  - apps/Daniel/backend/tests/daniel_backend.yml
