@@ -1,4 +1,4 @@
-Feature: Student CRUD
+Feature: Book CRUD
   In order to create, edit, update and delete books
   As a user
   I need handle it
