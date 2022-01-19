@@ -1,0 +1,6 @@
+daniel_backend:
+  suites:
+    health_check:
+      paths: [ apps/Daniel/backend/tests/features/books ]
+      contexts:
+        - Tests\Daniel\Infrastructure\Behat\ApiContext
