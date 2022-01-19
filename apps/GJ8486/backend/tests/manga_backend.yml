@@ -1,0 +1,6 @@
+manga_backend:
+  suites:
+    health_check:
+      paths: [ apps/GJ8486/backend/tests/features/manga ]
+      contexts:
+        - Tests\GJ8486\Manga\Infrastructure\ATDD\ApiContext
